@@ -1,0 +1,26 @@
+# Run `wandb sweep reproducibility-scripts/template-sweep.yaml` to generate a sweep.
+# Run `wandb agent template-sweep-id` to run the sweep.
+
+project: ASVSPOOF2019_HW
+name: train-sweep
+method: grid
+metric:
+  goal: maximize
+parameters:
+  wandb.mode:
+    value: online
+  wandb.use_global_dir:
+    value: True
+  seed:
+    value: 583472
+  resuming.resume:
+    value: True
+  resuming.use_commit:
+    value: True
+  
+
+command:
+  - python
+  - "-m"
+  - "ASVSPOOF2019_HW.template_experiment"
+  - ${args_no_hyphens}

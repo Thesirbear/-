@@ -1,0 +1,56 @@
+seed: 583472
+cuda_deterministic: true
+cuda_strong_deterministic: true
+data_dir: ${hydra:runtime.cwd}/../data/LA/LA/ASVspoof2019_LA_
+outputs_dir: ${hydra:runtime.cwd}/outputs
+outputs_subdir: dev
+job_subdir: dev
+wandb:
+  project: ASVSPOOF2019_HW
+  mode: online
+  anonymous: allow
+  tags:
+  - development
+  run_id: null
+  run_name: null
+  global_dir: ${hydra:runtime.cwd}/outputs
+  use_global_dir: false
+run_dir: ${hydra:run.dir}
+resuming_dir: null
+resuming:
+  resume: false
+  use_commit: false
+  wandb_cache_bust: 0
+  exclude_keys:
+  - run_dir
+  - data_dir
+  - outputs_dir
+  - resuming_dir
+  - wandb
+  - resuming.exclude_keys
+model_type: LCNN-LSTM-sum
+device: cpu
+dataset: asvspoof-2019
+batch_size: 8
+hidden_dim: 32
+input: 1
+output: 2
+dropout: 0.75
+epochs: 50
+opt: adamw
+beta_1_adamw: 0.9
+beta_2_adamw: 0.999
+eps_adamw: 0.0001
+opt_scheduler: None
+opt_restart: 0
+weight_decay: 0.005
+lr: 0.0003
+num_samples: 728
+num_workers: 4
+n_fft: 512
+hop_length: 10
+win_length: 20
+sample_rate: 1600
+lfcc_coef: 24
+lfcc_filters: 20
+lfcc_size: 500

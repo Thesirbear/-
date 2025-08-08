@@ -104,6 +104,7 @@ Remember to get back to this root one after finishing each step.
    A simple change if you're fine with the MIT license is to replace the `2022 Skander Moalla` with your year and name.
    Same for the `CITATION.cff` file.
    Commit.
+   TODO: Add license 
 5. Set up and edit the development environment instructions for the methods and platforms you will use and support.
    Each method supports a group of use cases:
     - **Docker**.
@@ -147,7 +148,7 @@ Remember to get back to this root one after finishing each step.
       Go to `installation/conda-osx-arm64-mps/README.md` for the setup.
       Come back here after following the instructions there.
 
-   Delete the installation directory for the installation method you don't use.
+   TODO: Delete the installation directory for the installation method you don't use.
 
    Naturally, results will be reproducible on machines with the same architecture and hardware acceleration
    using the same installation method,
@@ -244,6 +245,7 @@ Otherwise, the runs will be anonymous (you don't need to be logged in).
 
 > [!NOTE]
 > **TEMPLATE TODO**:
+TODO: DELETE THIS SECTION
 > Keep these scripts up to date and run your experiments using them.
 > Do provide the W&B runs and trained models or update this section.
 > Delete this note when shipping.
@@ -251,7 +253,7 @@ Otherwise, the runs will be anonymous (you don't need to be logged in).
 We provide scripts to reproduce our work in the `reproducibility-scripts/` directory.
 It has a README at its root describing which scripts reproduce which experiments.
 
-We share our Weights and Biases runs in [this W&B project](https://wandb.ai/claire-labo/template-project-name).
+We share our Weights and Biases runs in [this W&B project](https://wandb.ai/claire-labo/ASVSPOOF2019_HW).
 
 Moreover, we make our trained models available.
 You can follow the instructions in `outputs/README.md` to download and use them.
@@ -274,7 +276,7 @@ Below, we give a description of the main files and directories in this repositor
 
 ```
  └─── src/                              # Source code.
-    └── template_package_name           # Our package.
+    └── ASVSPOOF2019_HW           # Our package.
         ├── configs/                    # Hydra configuration files.
         └── template_experiment.py      # A template experiment.
 ```
@@ -306,4 +308,8 @@ This project is licensed under the LICENSE file in the root directory of the pro
 The initial code of this repository has been initiated by the [Python Machine Learning Research Template](https://github.com/CLAIRE-Labo/python-ml-research-template)
 with the LICENSE.ml-template file.
 
-Additional LICENSE files may be present in subdirectories of the project.
+
+
+Used materials:
+
+[How to write Relu from Scratch](https://www.youtube.com/watch?v=93qjwrP7PfE) - Used this one in order to understand how to implement custom activational functions, then i use some of this information to build mfm (Max-feature-map) activation function, to run LCNN.

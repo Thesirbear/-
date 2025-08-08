@@ -21,17 +21,17 @@ This guide includes the steps to do it, and there are general details in `data/R
 ```bash
 # SSH to a cluster.
 ssh clariden
-mkdir -p $HOME/projects/template-project-name
-cd $HOME/projects/template-project-name
+mkdir -p $HOME/projects/ASVSPOOF2019_HW
+cd $HOME/projects/ASVSPOOF2019_HW
 git clone <git SSH URL> dev
 git clone <git SSH URL> run
 
 # To setup symlinks to the scratch storage you can run the following commands
-mkdir -p $SCRATCH/projects/template-project-name/data/dev
-mkdir -p $SCRATCH/projects/template-project-name/outputs/dev
+mkdir -p $SCRATCH/projects/ASVSPOOF2019_HW/data/dev
+mkdir -p $SCRATCH/projects/ASVSPOOF2019_HW/outputs/dev
 for instance in run dev; do
-  ln -s $SCRATCH/projects/template-project-name/data/dev $HOME/projects/template-project-name/$instance/data/dev
-  ln -s $SCRATCH/projects/template-project-name/outputs/dev $HOME/projects/template-project-name/$instance/outputs/dev
+  ln -s $SCRATCH/projects/ASVSPOOF2019_HW/data/dev $HOME/projects/ASVSPOOF2019_HW/$instance/data/dev
+  ln -s $SCRATCH/projects/ASVSPOOF2019_HW/outputs/dev $HOME/projects/ASVSPOOF2019_HW/$instance/outputs/dev
 done
 ```
 
@@ -383,7 +383,7 @@ All the directories will be created automatically.
    (something like `/users/smoalla/jetbrains-server/dist`)
    not in its default location **(use the small "installation options..." link)**.
    For the project directory, it should be in the same location where it was mounted (`${PROJECT_ROOT_AT}`,
-   something like `/users/smoalla/projects/template-project-name/dev`).
+   something like `/users/smoalla/projects/ASVSPOOF2019_HW/dev`).
 
 When in the container, locate the name of the PyCharm IDE installed.
 It will be at

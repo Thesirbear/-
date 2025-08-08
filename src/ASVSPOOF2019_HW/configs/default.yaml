@@ -1,0 +1,43 @@
+defaults:
+  # Common setup.
+  - setup
+  # This file.
+  - _self_
+  # Optional override (untracked by git, must not impact reproducibility).
+
+
+#Model information and parametrs
+'model_type': 'LCNN-LSTM-sum'
+'device': 'cpu'
+'dataset': 'asvspoof-2019'
+'batch_size': 8
+'hidden_dim': 32
+'input': 1
+'output': 2
+'dropout': 0.75
+'epochs': 50
+'opt': 'adamw'
+'beta_1_adamw': 0.9
+'beta_2_adamw': 0.999
+'eps_adamw': 1e-4
+'opt_scheduler': None
+'opt_restart': 0
+'weight_decay': 5e-3
+'lr': 3e-4
+
+#Length of every recording(normalized length)
+'num_samples': 728
+
+'num_workers': 4
+
+#Transform parametrs
+'n_fft': 512
+'hop_length': 10
+'win_length': 20
+'sample_rate': 1600
+'lfcc_coef': 24
+'lfcc_filters': 20
+'lfcc_size': 500
+# 'kblock1': (5, 5, 1, 1),
+# 'kblock2': (2, 2, 2,)
+
